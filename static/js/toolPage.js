@@ -14,9 +14,9 @@ function uuidv4() {
  */
 function copyToClipboard(text) {
     //采用uuid作为id，避免不知道啥情况导致的id重复
-    var uuid=uuidv4();
-    $('body').after('<input id="'+uuid+'" readonly>');
-    var input = $('#'+uuid);
+    var uuid = uuidv4();
+    $('body').after('<input id="' + uuid + '" readonly>');
+    var input = $('#' + uuid);
     input.val(text);
     input.select();
     //注意：execCommand('copy')的前提是选中可编辑区域，且该可编辑区域未被隐藏
@@ -26,11 +26,11 @@ function copyToClipboard(text) {
 /**
  * 生成uuid，并复制到剪贴板
  */
-function uuidGenerator(){
-    var uuid=uuidv4();
-    if(copyToClipboard(uuid)) {
+function uuidGenerator() {
+    var uuid = uuidv4();
+    if (copyToClipboard(uuid)) {
         console.log(uuid);
-    }else{
+    } else {
         console.log('copy uuid v4 to clipboard failed');
     }
 }
