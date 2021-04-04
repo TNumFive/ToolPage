@@ -57,5 +57,9 @@ printf '安装vscode\n'
 #安装vscode
 sudo snap install code --classic
 
+printf '安装openjdk-14\n'
+#安装Java
+sudo apt install openjdk-14-jdk -y
+
 #执行完毕
 printf '#执行完毕\n'
