@@ -53,5 +53,9 @@ printf '安装node以及npm\n'
 #安装npm、node开发组件
 nvm install --lts
 
+printf '安装vscode\n'
+#安装vscode
+sudo snap install code --classic
+
 #执行完毕
 printf '#执行完毕\n'
