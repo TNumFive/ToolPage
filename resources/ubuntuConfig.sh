@@ -21,10 +21,10 @@ printf '安装git\n'
 #安装git
 sudo apt install git -y
 
-printf 'git配置代理\n'
-#配置代理
-git config --global http.proxy 'socks5://192.168.31.88:1080'  
-git config --global https.proxy 'socks5://192.168.31.88:1080'  
+#printf 'git配置代理\n'
+#配置代理 （正常不需要配置，或配置地址需要修改）
+#git config --global http.proxy 'socks5://192.168.31.88:1080'  
+#git config --global https.proxy 'socks5://192.168.31.88:1080'  
 
 printf '安装vim\n'
 #安装vim
