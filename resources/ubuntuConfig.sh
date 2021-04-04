@@ -19,7 +19,7 @@ sudo apt upgrade -y
 
 printf '安装git\n'
 #安装git
-sudo apt install git  
+sudo apt install git -y
 
 printf 'git配置代理\n'
 #配置代理
@@ -28,7 +28,7 @@ git config --global https.proxy 'socks5://192.168.31.88:1080'
 
 printf '安装vim\n'
 #安装vim
-sudo apt install vim
+sudo apt install vim -y
 #修改vim配置
 cd /etc/vimrc
 sudo mv vimrc vimrc.bak
@@ -36,7 +36,7 @@ sudo wget 47.100.5.197/configure/vimrc
 
 printf '安装gcc、g++\n'
 #安装gcc、g++开发组件
-sudo apt install build-essential
+sudo apt install build-essential -y
 
 printf '安装curl\n'
 #安装curl 
