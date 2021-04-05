@@ -1,7 +1,12 @@
-printf '安装wget\n'
+#printf '安装wget\n'
 # 安装wget用于下载配置文件
-sudo apt install wget 
+#sudo apt install wget 
 
+#printf '安装curl\n'
+#安装curl 
+#sudo apt install curl -y
+
+printf '开始配置系统\n'
 printf 'apt换源\n'
 #切换到apt源配置目录
 cd /etc/apt 
@@ -16,6 +21,29 @@ printf '更新软件\n'
 #更新软件
 sudo apt update
 sudo apt upgrade -y
+
+printf '安装gcc、g++\n'
+#安装gcc、g++开发组件
+sudo apt install build-essential -y
+
+printf '获取node version manager\n'
+#安装nvm
+wget https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+printf '安装node以及npm\n'
+#安装npm、node开发组件
+nvm install --lts
+
+printf '安装openjdk-14\n'
+#安装Java
+sudo apt install openjdk-14-jdk -y
+
+printf '安装net-tools\n'
+#安装net-tools ifconfig等命令
+sudo apt install net-tools
 
 printf '安装git\n'
 #安装git
@@ -34,32 +62,9 @@ cd /etc/vimrc
 sudo mv vimrc vimrc.bak
 sudo wget 47.100.5.197/configure/vimrc
 
-printf '安装gcc、g++\n'
-#安装gcc、g++开发组件
-sudo apt install build-essential -y
-
-printf '安装curl\n'
-#安装curl 
-sudo apt install curl -y
-
-printf '获取node version manager\n'
-#安装nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-printf '安装node以及npm\n'
-#安装npm、node开发组件
-nvm install --lts
-
 printf '安装vscode\n'
 #安装vscode
 sudo snap install code --classic
-
-printf '安装openjdk-14\n'
-#安装Java
-sudo apt install openjdk-14-jdk -y
 
 #执行完毕
 printf '#执行完毕\n'
