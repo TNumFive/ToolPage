@@ -43,7 +43,7 @@ sudo apt install openjdk-14-jdk -y
 
 printf '安装net-tools\n'
 #安装net-tools ifconfig等命令
-sudo apt install net-tools
+sudo apt install net-tools -y
 
 printf '安装git\n'
 #安装git
