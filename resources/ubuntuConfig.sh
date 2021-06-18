@@ -62,9 +62,9 @@ cd /etc/vimrc
 sudo mv vimrc vimrc.bak
 sudo wget 47.100.5.197/configure/vimrc
 
-printf '安装vscode\n'
+#printf '安装vscode\n'
 #安装vscode
-sudo snap install code --classic
+#sudo snap install code --classic
 
 #执行完毕
 printf '#执行完毕\n'
